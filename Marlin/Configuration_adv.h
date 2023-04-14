@@ -2325,12 +2325,12 @@
   #define MIN_CIRCLE_SEGMENTS    72   // Minimum number of segments in a complete circle
   //#define ARC_SEGMENTS_PER_SEC 50   // Use the feedrate to choose the segment length
   #define N_ARC_CORRECTION       25   // Number of interpolated segments between corrections
-  //#define ARC_P_CIRCLES             // Enable the 'P' parameter to specify complete circles
+  #define ARC_P_CIRCLES             // Enable the 'P' parameter to specify complete circles
   //#define SF_ARC_FIX                // Enable only if using SkeinForge with "Arc Point" fillet procedure
 #endif
 
 // G5 Bézier Curve Support with XYZE destination and IJPQ offsets
-//#define BEZIER_CURVE_SUPPORT        // Requires ~2666 bytes
+#define BEZIER_CURVE_SUPPORT        // Requires ~2666 bytes
 
 #if EITHER(ARC_SUPPORT, BEZIER_CURVE_SUPPORT)
   //#define CNC_WORKSPACE_PLANES      // Allow G2/G3/G5 to operate in XY, ZX, or YZ planes
@@ -2559,7 +2559,7 @@
   #define RETRACT_LENGTH                0.2 // (mm) Default retract length (positive value)
   #define RETRACT_LENGTH_SWAP           13  // (mm) Default swap retract length (positive value)
   #define RETRACT_FEEDRATE              25  // (mm/s) Default feedrate for retracting
-  #define RETRACT_ZRAISE                0.4 // (mm) Default retract Z-raise
+  #define RETRACT_ZRAISE                0   // (mm) Default retract Z-raise
   #define RETRACT_RECOVER_LENGTH        0   // (mm) Default additional recover length (added to retract length on recover)
   #define RETRACT_RECOVER_LENGTH_SWAP   0   // (mm) Default additional swap recover length (added to retract length on recover from toolchange)
   #define RETRACT_RECOVER_FEEDRATE      15  // (mm/s) Default feedrate for recovering from retraction
